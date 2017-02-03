@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="{author}"/>
+	<meta name="Description" content="页面说明"/>
+	<meta name="Keywords" content="页面关键字"/>
+	<title>遥点平台</title>
+    <link rel="stylesheet" href="__CSS__/zhuce/login2.css"/>
+    <link rel="stylesheet" href="__CSS__/zhuce/common.min.css"/>
+    <link rel="stylesheet" href="__CSS__/zhuce/bootstrap.min.css"/>
+    
+</head>
+<!--[if lt IE 9]>
+<script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+<body class="bgfooterColor">
+<!--conent start-->
+	<!--conent start-->
+	<div class="header index-header">
+	    <div class="layout clearfix">
+	         
+	        <ul class="mgl50 nav fl">
+	        </ul>
+	        <div class="user-box fr">
+	            
+	            <a class="button-btn" href="__URL__/login">登录</a>
+	        </div>
+	    </div>
+	</div>
+
+<div class="container" >
+    <div class="layout">
+        <div class="mgt20">
+
+            
+            <div class="verification clearfix mgt60">
+
+                <form action="__URL__/msg" id="verification-1" method="post" enctype="multipart/form-data">
+                    <ul class="verification-ul">
+                        <li class="clearfix mgt30">
+                            <p class="tips-l fl"><em>*</em>手机账号：</p>
+                            <input id="phone" name="phone" value="" type="text" placeholder="请输入手机号码" class="v-input chackInput fl" >
+                            <p><span class="fl"></span><em></em></p>
+                        </li>
+                        <li class="clearfix mgt30">
+                            <p class="tips-l fl"><em>*</em> 登录密码：</p>
+                            <input name="password" type="password" placeholder="请输入6-18位登录密码" class="v-input chackInput fl"id="pwd1" >
+                            <p class="tips-r  fl" data-tips="请输入最少6位密码"><span class="fl"></span><em></em></p>
+                        </li>
+                        <li class="clearfix mgt30">
+                            <p class="tips-l fl"><em>*</em>确认密码：</p>
+                            <input type="password" placeholder="请再次输入密码" class="v-input chackInput fl" data-status="pwd2" minlength="6" maxlength="18" id="pwd2">
+                            <p class="tips-r  fl" data-tips="密码两次输入不一致！"><span class="fl"></span><em></em></p>
+                        </li>
+                        <li class="clearfix mgt30">
+                            <p class="tips-l fl"><em>*</em>真实姓名：</p>
+                            <input type="text" name="user_realname" placeholder="请输入您的真实姓名" class="v-input chackInput fl" data-status="pwd2" minlength="6" maxlength="18" id="name">
+                            
+                        </li>
+						<li class="clearfix mgt30">
+                            <p class="tips-l fl"><em>*</em>邮箱账号：</p>
+                            <input id="email" name="email" value="" type="text" placeholder="请输入邮箱号码" class="v-input chackInput fl" >
+                            <p><span class="fl"></span><em></em></p>
+                        </li>
+                        <li class="clearfix mgt30">
+                            <p class="tips-l fl"><em>*</em>身份证号码：</p>
+                            <input id="idcard" name="user_IDCard" value="" type="text" placeholder="请输入身份证号码" class="v-input chackInput fl" >
+                            <p><span class="fl"></span><em></em></p>
+                        </li>
+
+                        <li class="clearfix mgt30 " >
+                            <p class="tips-l fl"><em>*</em>验证码：</p>
+                            <div class="fl" style="position:relative;">
+                                <input type="text" class="v-input chackInput fl" name="captcha" placeholder="请输入验证码" id="send" maxlength="6" data-status="sendCode">
+                                <a  class="btn-vcode timeOut fl" id="send_code" >发送验证码</a>
+                                <p class="tips-r  fl" data-tips="请输入正确验证码"><span class="fl"></span><em></em></p>
+                            </div>
+                        </li>
+                        
+                        <li class="clearfix mgt30">
+                            <p class="tips-l fl"></p>
+                           <a href="__URL__/msg" id="v-sub" ><input id="bt1" class="btn btn-primary" type='submit' value='注册' ></a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+	<div class="footer">
+	   <p style="text-align: center;">杭州禹乐网络科技有限公司©版权所有 浙网文（2016）0314-184号</p>
+	</div>
+
+	<script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+
+	<script src="__JS__/zhuce/jquery.min.js"></script>
+	<script src="__JS__/zhuce/common.js"></script>
+	
+	<script>
+	</script>
+	
+	<!--counter-->
+	<div class="counter">
+		<input type="hidden" class="J_ErrorImg" value="/yd/static/website/static/img/error-img.png">
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260312256'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260312256%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+	</div>
+
+<!--content end-->
+
+<!--script start-->
+<script src="__JS__/zhuce/plupload.full.min.js"></script>
+<script src="__JS__/zhuce/jquery.md5.min.js"></script>
+<script src="__JS__/zhuce/user.js"></script>
+<script>
+
+    var BASE_PATH = '';
+    $(function () {
+//        var upload = new YD_common();
+//        upload.upload('idCard1_zm','idCard1');
+//        upload.upload('idCard2_zm','idCard2');
+//        verification( 这里是接口地址)
+        new YD_common().sendCode();
+        new YD_common().verification('/yd/regist-save.html');
+
+        /*开发用*/
+		if(0 == 1){
+			$(".m-mask, .J_MsgDialog").show();
+        	$('.J_ToLink').attr("href", "index.html");
+        }
+        else if(0 == 2){
+        	$.xbox.tips("");
+        }
+
+    })
+</script>
+<script>
+	$().ready(function(){
+		fn1();
+		fn2();
+	})
+	function fn1(){
+		$('#send_code').click(function(){
+			var str=$('#email').val();
+            var name=$('#name').val();
+            var phone=$('#phone').val();
+            var idCard=$('#idcard').val();
+            var reg=/^(\w+)@(\w+)\.com$/;
+			var reg1=/^[1][0-9]{10}$/;
+            var reg_card=/^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/;
+			if(!str.match(reg)){
+				alert('邮箱号不合法');exit;
+			}
+			if(!idCard.match(reg_card)){
+				alert('身份证号码不合法');exit;
+			}
+            if(!phone.match(reg1)){
+                alert('手机号不合法');exit;
+            }
+			var data={phone:phone,name:name};
+			//发送ajax请求
+			$.get('__URL__/sendmsg',data,function(msg){
+				alert(msg);
+			});
+
+		});
+	}
+
+	function fn2(){
+		$('#phone').blur(function(){
+
+			var str=$('#phone').val();
+			var data={phone:str};
+			$.get('__URL__/getajax',data,function(msg){
+				if(msg=='yes') {
+                    alert('该账号已经注册，不可在注册');
+                    $('#bt1').attr('disabled', 'disabled');
+                    //exit;
+				}else{
+					$('#bt1').removeAttr('disabled');
+				}
+			});
+		});
+	}
+
+</script>
+<!--script end-->
+</body>
+</html>
